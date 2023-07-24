@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping CAD</title>
+  <link rel="stylesheet" href="styles.css">
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  display: block;
+  width: 100vw;
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-top: 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+h1:hover {
+  background-color: #ccc;
+  color: orange ;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product img {
+  width: 280px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin: 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.cart {
+  position: fixed;
+  bottom: 20aapx;
+  right: 20px;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart:hover {
+  background-color: #f57c00;
+}
+
+#cartIcon {
+  width: 30px;
+  height: 30px;
+}
+
+#cartCount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+</style>
+</head>
+<body>
+  <h1>"আপনার স্বপ্নপুরী সত্যি করুন আমাদের পন্যের সাহায্যে"</h1>
+  <div class="product" onclick="addToCart('product1')">
+    <img src="সোনা.jpeg" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>$10.99</p>
+  </div>
+  <div class="product" onclick="addToCart('product2')">
+    <img src="সোনা1.jpeg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$19.99</p>
+  </div>
+  <div class="product" onclick="addToCart('product3')">
+    <img src="সোনা2.jpeg" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>$15.49</p>
+  </div>
+  <div class="cart">
+    <img src="cart.png" alt="Cart" id="cartIcon">
+    <span id="cartCount">0</span>
+  </div>
+  
+  <div class="product" onclick="addToCart('product4')">
+  <img src="সোনা4.jpeg" alt="Product 4">
+  <h3>Product 4</h3>
+  <p>$12.99</p>
+</div>
+<div class="product" onclick="addToCart('product5')">
+  <img src="বাইক.jpg" alt="Product 5">
+  <h3>Product 5</h3>
+  <p>$8.49</p>
+</div>
+<div class="product" onclick="addToCart('product6')">
+  <img src="বাইক1.jpg" alt="Product 6">
+  <h3>Product 6</h3>
+  <p>$14.99</p>
+</div>
+<div class="product" onclick="addToCart('product7')">
+  <img src="বাইক2.jpg" alt="Product 7">
+  <h3>Product 7</h3>
+  <p>$9.99</p>
+</div>
+<div class="product" onclick="addToCart('product8')">
+  <img src="বাইক3.jpg" alt="Product 8">
+  <h3>Product 8</h3>
+  <p>$7.99</p>
+</div>
+<div class="product" onclick="addToCart('product9')">
+  <img src="car.jpg" alt="Product 9">
+  <h3>Product 9</h3>
+  <p>$11.49</p>
+</div>
+<div class="product" onclick="addToCart('product10')">
+  <img src="car1.jpg" alt="Product 10">
+  <h3>Product 10</h3>
+  <p>$13.99</p>
+</div>
+<div class="product" onclick="addToCart('product11')">
+  <img src="car3.jpg" alt="Product 11">
+  <h3>Product 11</h3>
+  <p>$6.99</p>
+</div>
+<div class="product" onclick="addToCart('product12')">
+  <img src="car4.jpeg" alt="Product 12">
+  <h3>Product 12</h3>
+  <p>$8.99</p>
+</div>
+<div class="product" onclick="addToCart('product13')">
+  <img src="car5.jpg" alt="Product 13">
+  <h3>Product 13</h3>
+  <p>$10.99</p>
+</div>
+
+</body>
+<script>
+  let cartCount = 0;
+
+function addToCart(product) {
+  cartCount++;
+  document.getElementById('cartCount').textContent = cartCount;
+  // Additional code for adding the selected product to the cart
+}
+
+</script>
+</html>
+
+

@@ -1,0 +1,298 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Animation</title>
+  <style>
+    
+
+/* Common styles for the container */
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Styles for the Registration Form section */
+.registration-form {
+   /* Hide the registration form by default */
+}
+
+.registration-form.show {
+  display: block; /* Show the registration form when needed */
+}
+
+.registration-form h2 {
+  margin-top: 0;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: #ff0000;
+    
+}
+
+.registration-form label {
+  margin-top: 10px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  width:30%;
+  
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form input[type="submit"]:hover {
+  background-color: #45a049;
+  color:blu;
+}
+.bottons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Additional styles for input animations */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+  background-color: #f2f2f2; /* Default background color */
+  color: #333; /* Default text color */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Animation when input field is focused */
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus,
+.registration-form input[type="password"]:focus {
+  border-color: #008cba; /* Change border color when focused */
+  box-shadow: 0 0 5px #008cba; /* Add shadow effect when focused */
+  background-color: #e6f9ff; /* Change background color when focused */
+  color: #0073e6; /* Change text color when focused */
+  border-width: 3px; /* Change border width when focused */
+}
+
+/* Animation when input field is filled */
+.registration-form input[type="text"]:valid,
+.registration-form input[type="email"]:valid,
+.registration-form input[type="tel"]:valid,
+.registration-form input[type="password"]:valid {
+  border-color: #4CAF50; /* Change border color when filled */
+  background-color: #eaffea; /* Change background color when filled */
+  color: #009900; /* Change text color when filled */
+  border-width: 2px; /* Change border width when filled */
+}
+
+/* Placeholder color */
+.registration-form input::placeholder {
+  color: #999;
+}
+
+/* Error message */
+.error-message {
+  color: #f00;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+    /* Slide-in from the left */
+    .animate-left {
+        animation: slideInLeft 1s ease;
+    }
+    
+    /* Slide-in from the right */
+    .animate-right {
+        animation: slideInRight 1s ease;
+    }
+
+    /* Slide-in from the top */
+    .animate-up {
+        animation: slideInUp 1s ease;
+    }
+
+    /* Slide-in from the bottom */
+    .animate-down {
+        animation: slideInDown 1s ease;
+    }
+
+    /* Define the animations */
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+   
+    /*  botton Define the animation */
+@keyframes scaleUp {
+  from {
+    transform: scale(0); /* Start from a scale of 0 (small size) */
+  }
+  to {
+    transform: scale(1); /* End with a scale of 1 (original size) */
+  }
+}
+
+/* Apply the animation to elements with 'botn' class */
+.botn {
+  
+  animation: scaleUp 1s ease;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="registration-form" id="registrationForm">
+      <h2 id="typing-text">Registration Form</h2>
+      <form class="registrationForms" method="POST" data-email=" jasan15062000@gmail.com"
+ action="">
+              <label for="fullName">Full Name</label>
+      <input class="texts animate-left" type="text" id="fullName" name="fullName" placeholder="Your FullName.. " required>
+
+      <label for="email">Email</label>
+      <input class="emails animate-right" type="email" id="email" name="email" placeholder="Your email.. " required>
+
+      <label for="phoneNumber">Phone Number</label>
+      <input class="Numbers animate-up" type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phoneNumber.. " required>
+
+      <label for="password">Password</label>
+      <input class="passwords animate-down" type="password" id="password" name="password" placeholder="Your password.. "required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input class="PasswordsC animate-left" type="password" id="confirmPassword" name="confirmPassword" placeholder="Your confirmPassword.. " required>
+
+      <!-- Add more fields as needed -->
+
+   <div class="bottons">
+           <input class="botn" type="submit" value="Register">
+   </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      var form = document.getElementById('registrationForm');
+      if (form.style.display === 'none') {
+        form.style.display = 'block';
+      } else {
+        form.style.display = 'none';
+      }
+    }
+    
+ //text raitin//
+     function startTyping(message, speed) {
+      const typingDiv = document.getElementById('typing-text');
+      typingDiv.innerHTML = '';
+      typingDiv.classList.add('typing');
+
+      let index = 0;
+
+      function type() {
+        if (index <= message.length) {
+          typingDiv.innerHTML = message.substring(0, index);
+          index++;
+          setTimeout(type, speed);
+        } else {
+          setTimeout(clearText, speed * 2);
+        }
+      }
+
+      function clearText() {
+        let length = typingDiv.innerHTML.length;
+
+        function deleteChar() {
+          if (length >= 0) {
+            typingDiv.innerHTML = message.substring(0, length);
+            length--;
+            setTimeout(deleteChar, speed);
+          } else {
+            typingDiv.classList.remove('typing');
+            setTimeout(startTyping, speed * 2, message, speed);
+          }
+        }
+
+        deleteChar();
+      }
+
+      type();
+    }
+
+    const message = "Registration Form...";
+    const typingSpeed = 100; // টাইপিং গতি (মিলিসেকেন্ড)
+
+    startTyping(message, typingSpeed);
+ 
+    
+    
+  </script>
+</body>
+</html>

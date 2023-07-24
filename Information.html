@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form Example</title>
+    <style>
+  
+        
+        
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .contact{
+   
+      margin: 10px;
+      padding: 5px;
+    }
+    
+    body {
+  background-image: url('contactimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+    h4 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #444;
+      font-size: 38px;
+      margin: 20px 0;
+      text-align: center;
+      color:red;
+      font-style: italic;
+      
+    }
+
+    p {
+      color: #666;
+    
+      margin-bottom: 0px;
+      text-align: center;
+      
+  padding: 10px 0px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #041245ff;
+  background-color: fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-style: italic;
+
+
+    }
+    .contact{}
+
+    h1 span, h2 span {
+      color: #999;
+      font-size: 24px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+   .numbertitle{
+      color: blue;
+      font-weight: bold;
+      margin: 0px;
+      padding: 0px;
+      text-decoration: underline;
+     line-height: 1.5; 
+     text-align: center;
+    }
+    .number{
+      color:#f4894;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 0px;
+          position: relative;
+          cursor: pointer;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+     
+      color: #333;
+      border-bottom: 1px dashed #999;
+      padding: 15px;
+    }
+  
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 100px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      font-size:10px;
+    }
+        @keyframes colorAnimation {
+      0% {
+        color: red;
+      }
+      50% {
+        color: blue;
+      }
+      100% {
+        color: green;
+      }
+    }
+
+    .animated {
+      animation: colorAnimation 2s infinite;
+    }
+          form {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            text-align:center;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+      .butt{
+       
+          padding: 10px 5px;
+  margin: 5px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  animation: buttonAnimation 2s infinite;
+}
+      }  
+        
+        @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    };
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-form {
+
+    margin: 0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  
+                display: flex;
+            flex-direction: column;
+            max-width: 100%;
+}
+
+.animated-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    animation: slideInLeft 0.8s forwards;
+}
+
+.animated-form input[type="text"]#name {
+    animation: slideInLeft 0.10s forwards;
+    animation-delay: 0.2s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.animated-form input[type="text"]#email {
+    animation: slideInRight 0.5s forwards;
+    animation-delay: 0.4s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.animated-form textarea {
+    animation: slideInTop 0.5s forwards;
+    animation-delay: 0.6s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.animated-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: slideInBottom 0.5s forwards;
+    animation-delay: 0.8s;
+}
+
+.animated-form input[type="submit"]:hover {
+    background-color: #f122f2;
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/google-spreadsheet@3.0.0/dist/google-spreadsheet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.3.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone.min.js"></script>
+    <script>
+        async function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Load credentials from credentials.json
+            var response = await fetch('credentials.json');
+            var credentials = await response.json();
+
+            // Authenticate with Google Sheets API
+            var { GoogleSpreadsheet } = window['google-spreadsheet'];
+            var doc = new GoogleSpreadsheet('https://docs.google.com/spreadsheets/d/1cYGCZGKOXqLLWF3sYpuRix9u8VSbHPcnHRopsRdVs48/edit?usp=drivesdk'); // Replace with your spreadsheet ID
+            await doc.useServiceAccountAuth(credentials);
+            await doc.loadInfo();
+
+            // Select the first sheet
+            var sheet = doc.sheetsByIndex[0];
+
+            // Prepare the data to be written to the spreadsheet
+            var data = {
+                Name: name,
+                Email: email,
+                Message: message,
+                Timestamp: moment().tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss')
+            };
+
+            // Append the data to the sheet
+            await sheet.addRow(data);
+
+            // Show success message
+            alert("Form submitted successfully!");
+        }
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Perform validation logic here
+            // ...
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <h4>Get in Touch</h4>
+  <h1>Connect with Me with Confidence</h1>
+  <p>Please fill out the form on this section to contact with me. Or call between 10:00 AM and 8:00 PM, Saturday through Thursday.</p>
+<div class="contact">
+  <span class="numbertitle animated" id="callMe"></span><br> 
+    <p>নাম্বারের উপর ক্লিক করুন যাতে কন্টাক্টের ডিটেইলস দেখানো হয়।</p>
+  <p class="number" style="font-family: 'Arial', sans-serif; font-size: 24px; font-weight: bold; color: red; text-align: center;" href="#" onclick="callList('01714956817')">01714956817</p>
+    <div id="contact-details"></div>
+    <br>
+  <span class="numbertitle animated" id="email" ></span><br>
+  <div class="tooltip number " style="font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; color: red; text-align: center; cursor: pointer;" onclick="openEmailCompose()">shawonondoker0@gmail.com
+      <span class="tooltiptext">আমাকে ইমেইল পাঠান </span>
+</div>
+</div>
+    <form onsubmit="return validateForm();" class="animated-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name..." required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="email..." required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="message..." required></textarea>
+
+     <div class="butt" >
+               <input type="submit" value="Submit" onclick="submitForm()">
+     </div>
+    </form>
+    <script>
+    
+    
+    
+    
+    
+      function autoWriteText() {
+  var elements = document.getElementsByClassName('numbertitle');
+  var delay = 100; // প্রতিটি অক্ষরের জন্য অতিরিক্ত সময় মিলিসেকেন্ড নির্ধারণ করুন
+
+  for (var i = 0; i < elements.length; i++) {
+    var text = elements[i].innerHTML;
+    elements[i].innerHTML = '';
+
+    for (var j = 0; j < text.length; j++) {
+      (function (i, j) {
+        setTimeout(function () {
+          elements[i].innerHTML += text[j];
+        }, j * delay);
+      })(i, j);
+    }
+  }
+}
+
+// পেজ লোড হলে ফাংশন কল করুন
+window.onload = function () {
+  autoWriteText();
+};
+
+ 
+
+//auto raitin
+
+
+function autoWriteText(elementId, text, delay) {
+      var element = document.getElementById(elementId);
+      var index = 0;
+      var textLength = text.length;
+      var reverse = false;
+
+      function writeNextCharacter() {
+        if (reverse) {
+          if (index >= 0) {
+            element.innerHTML = text.substring(0, index);
+            index--;
+            setTimeout(writeNextCharacter, delay);
+          } else {
+            reverse = false;
+            index = 0;
+            setTimeout(writeNextCharacter, delay);
+          }
+        } else {
+          if (index < textLength) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(writeNextCharacter, delay);
+          } else {
+            reverse = true;
+            setTimeout(writeNextCharacter, delay);
+          }
+        }
+      }
+
+      writeNextCharacter();
+    }
+
+    autoWriteText('callMe', 'Coll Me :', 100);
+    autoWriteText('email', 'Email :', 100);
+    
+    
+    //কল ডিটেলস নাম্বারের
+        function callList(number) {
+      const callListResponse = [
+        { name: 'Shawon Khondoker', number: '01714956817', duration: '৫ মিনিট' },
+       
+
+        // আরো কন্টাক্ট এই রকম যুক্ত করা যাবে
+      ];
+
+
+
+      function showContactDetails(contact) {
+        const contactDetailsDiv = document.getElementById('contact-details');
+        contactDetailsDiv.innerHTML = `
+          <p>নাম: ${contact.name}</p>
+          <p>নাম্বার: ${contact.number}</p>
+          <p>ডিউরেশন: ${contact.duration}</p>
+        `;
+      }
+
+      function handleClick(number) {
+        const contact = callListResponse.find(c => c.number === number);
+        if (contact) {
+          showContactDetails(contact);
+        } else {
+          console.log('কন্টাক্ট খুঁজে পাওয়া যায়নি।');
+        }
+      }
+
+      handleClick(number);
+    }
+    //email ✉️✉️
+        function openEmailCompose() {
+      window.location.href = 'https://mail.google.com/mail/u/0/#sent?compose=new ';
+    }
+</script>
+
+</body>
+</html>
+
